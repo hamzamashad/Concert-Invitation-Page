@@ -1,3 +1,28 @@
+/* Navigation Bar */
+
+nav .nav-holder {
+    cursor: pointer;
+    left: 105%;
+    top: 50%;
+}
+
+nav i {
+    cursor: pointer;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.6rem;
+}
+
+nav ul li a:hover {
+    color: red;
+}
+
+/* End of nav bar */
+
+
 /* Home */
 
 #home {
