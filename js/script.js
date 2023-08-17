@@ -3,8 +3,12 @@ quotesTags = '#singers .singer-quote',
 userMessageInputTag = '#contact .contact textarea',
 remainingCharsTag = '#contact .contact p span',
 concertDate = '26 february 2024 9:00:00',
+navItemsTag = 'nav .nav-items',
+navHolderTag = 'nav .nav-holder',
+navCloserTag = 'nav .nav-items i',
 charLimit = 100;
 
+// Function to countdown to concert date
 function countDownToTime(countTo) {
     let futureDate = new Date(countTo),
     now = new Date();
@@ -27,6 +31,7 @@ function countDownToTime(countTo) {
     setInterval(function() {  countDownToTime(countTo); }, 1000);
 }
 
+// Function to display user message char limit
 function displayCharCount() {
     const chars = $(userMessageInputTag).val().length,
     remainingChars = charLimit - chars;
@@ -37,6 +42,22 @@ function displayCharCount() {
     }
 }
 
+
+// Handling click of navbar menu icon
+$(navHolderTag).click(function () { 
+    if ($(navItemsTag).css('display') == 'block') {
+        $(navItemsTag).hide(1000);
+    } else {
+        $(navItemsTag).show(1000)
+    }
+});
+
+// Handling click of navbar close icon
+$(navCloserTag).click(function () { 
+    $(navItemsTag).hide(1000);
+});
+
+// Handling singer click ---- accordion effect
 $(singerNameTag).click(function () { 
     $(quotesTags).slideUp(400, 'linear');
     if ($(this).next().css('display') != 'block') {
@@ -44,12 +65,16 @@ $(singerNameTag).click(function () {
     }
 });
 
+// Handling user message input
 $(userMessageInputTag).keyup(function () {
     displayCharCount();
 });
 
+
+// onload defaults
 $(window).on("load", function() {
     countDownToTime(concertDate);
+    $(navItemsTag).hide();
     $(quotesTags).hide();
     displayCharCount();
 });

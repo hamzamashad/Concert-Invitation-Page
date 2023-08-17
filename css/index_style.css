@@ -31,6 +31,8 @@ nav ul li a:hover {
     background-size: cover;
 }
 
+/* End of Home Section */
+
 
 /* Singers */
 
@@ -43,8 +45,10 @@ nav ul li a:hover {
     background-color: #ccc;
 }
 
+/* End of Singers Section */
 
-/* Invitations */
+
+/* Invitation */
 
 #invitation {
     background-image: linear-gradient(rgba(214, 46, 51 , 0.6), rgba(214, 46, 51 , 0.6)), url(../images/invitation-2508607__340.jpg);
@@ -56,9 +60,13 @@ nav ul li a:hover {
     border: 1px solid white;
 }
 
+/* End of Invitation Section */
+
 
 /* Contact */
 
 #contact .contact textarea {
     resize: none;
 }
+
+/* End of Contact Section */
