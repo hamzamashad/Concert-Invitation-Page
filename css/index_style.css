@@ -1,0 +1,39 @@
+/* Home */
+
+#home {
+    background-image: linear-gradient(rgba(214, 46, 51 , 0.6), rgba(214, 46, 51 , 0.6)), url(../images/events-heavenly-header.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* Singers */
+
+#singers .singer-name {
+    background-color: rgba(214, 46, 51 , 0.6);
+    cursor: pointer;
+}
+
+#singers .singer-quote {
+    background-color: #ccc;
+}
+
+
+/* Invitations */
+
+#invitation {
+    background-image: linear-gradient(rgba(214, 46, 51 , 0.6), rgba(214, 46, 51 , 0.6)), url(../images/invitation-2508607__340.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#invitation .item {
+    border: 1px solid white;
+}
+
+
+/* Contact */
+
+#contact .contact textarea {
+    resize: none;
+}
